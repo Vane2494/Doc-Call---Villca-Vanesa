@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br><br>
+    <h3 class="titulo">Seleccion de horarios</h3>
+
+    <form action="">
+        
+
+        <div class="selector-fechas">
+        
+            <h3 class="titulo">Selecciona las fechas disponibles para este mes</h3>
+            <br><br>
+            <span class="fechas-doc-titulo">Lunes</span>
+            <span class="fechas-doc-titulo">Martes</span>
+            <span class="fechas-doc-titulo">Miercoles</span>
+            <span class="fechas-doc-titulo">Jueves</span>
+                <br><br>
+            <span class="fechas-doc">10</span>
+            <span class="fechas-doc">11</span>
+            <span class="fechas-doc">12</span>
+            <span class="fechas-doc">13</span>
+            <br><br>
+            <span class="fechas-doc">17</span>
+            <span class="fechas-doc">18</span>
+            <span class="fechas-doc">19</span>
+            <span class="fechas-doc">20</span>
+            <br><br>
+            <span class="fechas-doc">24</span>
+            <span class="fechas-doc">25</span>
+            <span class="fechas-doc">26</span>
+            <span class="fechas-doc">27</span>
+          </div>
+          <br><br>
+    
+          <h3 class="titulo">Selecciona los horarios disponibles para este mes</h3>
+    
+          <div class="selector-horarios">
+            
+
+            <span class="horarios-doc">08:00 hs</span>
+            <span class="horarios-doc">08:30 hs</span>
+            <span class="horarios-doc">09:00 hs</span>
+            <span class="horarios-doc">09:30 hs</span>
+            <br><br>
+            <span class="horarios-doc">18:00 hs</span>
+            <span class="horarios-doc">18:30 hs</span>
+            <span class="horarios-doc">19:00 hs</span>
+            <span class="horarios-doc">19:30 hs</span>
+          </div>
+
+
+          <div class="fin-form">
+            <a class="botones" onclick="verificarTurno()">Agregar</a>
+            <a class="botones.cancelar" href="home.html">Cancelar</a>
+        </div>
+    </form>
+<nav>
+      
+        <ul>
+            <span class="nav-li" onclick="location.href='home-medico.html'">Home</span>
+            <span class="turno-li" onclick="location.href='mispacientes.html'">Pacientes</span>
+            <span class="nav-li" onclick="location.href='horarios-doc.html'">Horarios</span>
+        </ul>
+
+    </nav>
+</body>
+
+<script>
+
+  function popUpExitoso(){
+            var fechayhora = document.getElementById("idFechaForm").value
+            console.log(fechayhora)
+            if(fechayhora === ""){
+                alert("Por favor ingrese una fecha y hora para la consulta")
+                return false;
+                
+            }else{
+                document.getElementById("pop-up-exitoso").classList.toggle('mostrar');
+            }
+        
+
+   
+  }
+  
+//Docs
+
+//Fecha
+    const fechas = document.querySelectorAll('.fechas-doc');
+
+    function seleccionarFecha(event) {
+
+    const fechaSeleccionada = event.currentTarget;
+    fechaSeleccionada.classList.toggle('seleccionada');
+    }
+
+    fechas.forEach(fecha => {
+     fecha.addEventListener('click', seleccionarFecha);
+    });
+
+//Hora
+    const horarios = document.querySelectorAll('.horarios-doc');
+
+    function seleccionarHorario(event) {
+
+    const horarioSeleccionado = event.currentTarget;
+    horarioSeleccionado.classList.toggle('seleccionado');
+    }
+
+    horarios.forEach(horario => {
+     horario.addEventListener('click', seleccionarHorario);
+    });
+
+
+function enviarHome() {
+  event.preventDefault();
+}
+
+
+</script>
+</html>

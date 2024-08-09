@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+ </head>
+ <body id="web-login">
+    
+    <div class="log-div">
+      
+       <h1 class="redirigir">
+         ¡Bienvenido Doctor!
+      </h1>
+      <br>
+        <img class="img-logo" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo.png?1682464702888" alt="logo de doccall">
+        <form onsubmit="return validarForm();">
+            <input class="input-type" type="text" placeholder="✉ Ingresa tu email" name="mail-log">
+                <br>
+            <input class="input-type" type="password" placeholder="⚿ Ingresa tu contraseña" name="pass-log">
+        <div class="texto-pass">
+            
+            <div class="recordar-pass">
+                <input type="checkbox"> Recordar
+            </div>
+
+            <p class="olvide-pass redirigir">Olvide mi contraseña</p>
+        
+        </div>
+
+                <br>  <br>
+               
+          <a href="home-medico.html" class="botonA">
+        Ingresar
+          </a>
+          <br>  <br>
+            <a class="redirigir" href="registro-medico.html">¿No tienes cuenta? Registrate</a><br><br>
+          
+            
+        </form>
+      
+    </div>
+
+   <script>
+     
+     const element = document.getElementById("btnSubmit");
+element.addEventListener("click", validarForm);
+
+function validarForm(){
+  event.preventDefault();
+  
+  var $maillog = document.getElementsByName('mail-log')[0].value;
+  var $passlog = document.getElementsByName('pass-log')[0].value;
+  
+    if($maillog == 'mailejemplo@gmail.com' && $passlog == 'passejemplo'){
+        window.location.href="home-medico.html";}
+        else {
+            alert('Error en los datos de logeo');
+        }
+  
+}
+     
+     
+     
+     
+     
+     
+   </script>
+  </body>
+</html>

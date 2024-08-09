@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Inicio</title>
+</head>
+<body>
+  
+  
+    <header>
+        <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
+        <h2 class="titulo" >Bienvenid@ </h2><br>
+        <p>Cuida tu salud desde cualquier lugar</p><br>
+    </header>
+
+  <section>
+
+  <h2 class="busquedas"> Busquedas recientes... </h2>
+  
+    <div class="busq-rec">
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono4.png?v=1683596306056" alt="doctor uno">
+            <b>Doctor uno</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono3.png?v=1683596306758" alt="doctor uno">
+            <b>Doctor dos</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono2.png?v=1683596307494" alt="doctor uno">
+            <b>Doctor tres</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono1.png?v=1683596308171" alt="doctor uno">
+            <b>Doctor cuatro</b>
+            <p>Especialidad</p>
+        </div>
+    </div>
+  </section>
+  
+    <div class="info-doc">
+        <div class="especialista">
+          <h2>  DRA. LAMAS Silvia </h2>
+          <br>
+          <br>
+           <img class="perfil1" src="https://platform.docplanner.com/img/general/infopages/online-consultations-patients/woman-5.png?2854929810" alt="fotoperfil">
+           <br>
+           <h3> Sobre mi: </h3>
+           <p> Altamente capacitada, trabajo incansablemente para brindar la mejor atención medica a mis pacientes. </p>
+           <br>
+           <h3> Obra Social </h3>
+           <p> Swiss medical / Osde / AcaSalud </p>
+           <br>
+          <h3> Particular (sin obra social) </h3>
+           <br>
+           <h3> Atiende a: </h3>
+           <p>  Adultos, niños de cualquier edad</p>
+            <br>
+           
+           <button class="boton"  onclick="mostrarDoc()"> Cerrar</button>
+        </div>
+    </div>
+  
+  <div class="info-doc">
+    
+    <div class="especialista">
+          <h2>  DR. DUARTE Emilio </h2>
+          <br>
+           <img class="perfil1" src="https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/9ab307/9ab307609b8622a95f10a2489174da20_medium_square.jpg" alt="fotoperfil">
+           <br>
+           <h3> Sobre mi: </h3>
+           <p> Altamente capacitado, trabajo incansablemente para brindar la mejor atención medica a mis pacientes. </p>
+           <br>
+           <h3> Obra Social </h3>
+           <p> Swiss medical / Osde / AcaSalud </p>
+           <br>
+          <h3> Particular (sin obra social) </h3>
+           <br>
+           <h3> Atiende a: </h3>
+           <p>  Adultos, niños de cualquier edad</p>
+            <br>
+           
+           <button class="boton"  onclick="mostrarDoc()" > Cerrar</button>
+     </div>
+  </div>
+  
+  
+  
+  <div class="info-doc">
+        <div class="info-doc-detalle">
+            <h3>Dr. aaaaaaaaa</h3><br>
+            <p>aaaaaaaaaaaaa</p><br>
+            <h3>Contacto</h3><br>
+            <p>aaaaaaaaaaaaaaaa@gmail.com</p><br>
+            <a href="perfil-doctor.html">Ir a perfil</a><br><br>
+            <button onclick="mostrarDoc()">Cerrar</button>
+        </div>
+    </div>
+
+    <nav>
+      
+        <ul>
+            <span class="nav-li" onclick="location.href='home.html'">Home</span>
+            <span class="nav-li" onclick="location.href='entrar-consulta.html'">Consultas</span>
+            <span class="turno-li" onclick="location.href='reservar-turno.html'">Nuevo turno</span>
+            <span class="nav-li" onclick="location.href='mis-turnos.html'">Mis turnos</span>
+            <span class="nav-li" onclick="location.href='perfil.html'">Perfil</span>
+            
+        </ul>
+
+    </nav>
+  
+  
+<script>
+
+var docinfo = document.getElementsByClassName("celda-doc")
+
+for (var i = 0; i < docinfo.length; i++) {
+  docinfo[i].addEventListener("click", mostrarDoc);
+}
+
+  console.log(docinfo)
+
+function mostrarDoc() {
+      document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
+
+}
+  
+
+
+</script>
+</body>
+</html>
+

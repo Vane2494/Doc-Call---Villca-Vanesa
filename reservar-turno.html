@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+    <title> Reservar turno</title>
+</head>
+<body id="web-reserva">
+   
+    <form action="" onsubmit="enviarHome()">
+      <label for="idFechaForm" class="titulo">Elegi un Doctor segun la especialidad necesitada</label>
+      
+      
+        <div class="busq-rec">
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono4.png?v=1683596306056" alt="doctor uno">
+            <b>Doctor uno</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono3.png?v=1683596306758" alt="doctor uno">
+            <b>Doctor dos</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono2.png?v=1683596307494" alt="doctor uno">
+            <b>Doctor tres</b>
+            <p>Especialidad</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono1.png?v=1683596308171" alt="doctor uno">
+            <b>Doctor cuatro</b>
+            <p>Especialidad</p>
+        </div>
+    </div>
+      
+
+      <h3 class="titulo">Selecciona una fecha</h3>
+
+      <div class="selector-fechas">
+        
+        <span class="fechas-doc">Lunes 3</span>
+        <span class="fechas-doc">Martes 4</span>
+        <span class="fechas-doc">Miercoles 5</span>
+        <span class="fechas-doc">Jueves 6</span>
+            <br><br>
+        <span class="fechas-doc">Lunes 10</span>
+        <span class="fechas-doc">Martes 11</span>
+        <span class="fechas-doc">Miercoles 12</span>
+        <span class="fechas-doc">Jueves 13</span>
+      </div>
+      <br><br>
+
+      <h3 class="titulo">Selecciona un horario</h3>
+
+      <div class="selector-horarios">
+        
+        <span class="horarios-doc">18:00 hs</span>
+        <span class="horarios-doc">18:30 hs</span>
+        <span class="horarios-doc">19:00 hs</span>
+        <span class="horarios-doc">19:30 hs</span>
+      </div>
+
+     <div class="fin-form">
+         <a class="botones" onclick="verificarTurno()">Agregar</a>
+         <a class="botones cancelar" href="home.html">Cancelar</a>
+     </div>
+
+</form>
+
+<div id="pop-up-exitoso">
+    <div class="pop-up">
+        <h3>Se ha guardado el turno correctamente</h3>
+        <br>✔️<br>
+
+        <a class="botones" href="misturnos.html">OK</a>
+
+    </div>
+</div>
+
+<script>
+
+
+    function enviarHome(){
+            window.location.href="misturnos.html";
+    }
+  function popUpExitoso(){
+            var fechayhora = document.getElementById("idFechaForm").value
+            console.log(fechayhora)
+            if(fechayhora === ""){
+                alert("Por favor ingrese una fecha y hora para la consulta")
+                return false;
+                
+            }else{
+                document.getElementById("pop-up-exitoso").classList.toggle('mostrar');
+            }
+        
+
+   
+  }
+  
+  //Docs
+const celdas = document.querySelectorAll('.celda-doc');
+
+function seleccionarCelda(event) {
+  celdas.forEach(celda => {
+    celda.classList.remove('seleccionado');
+  });
+
+  const celdaSeleccionada = event.currentTarget;
+  celdaSeleccionada.classList.add('seleccionado');
+}
+
+celdas.forEach(celda => {
+  celda.addEventListener('click', seleccionarCelda);
+});
+
+//Fecha
+    const fechas = document.querySelectorAll('.fechas-doc');
+
+    function seleccionarFecha(event) {
+    fechas.forEach(fecha => {
+        fecha.classList.remove('seleccionada');
+    });
+
+    const fechaSeleccionada = event.currentTarget;
+    fechaSeleccionada.classList.add('seleccionada');
+    }
+
+    fechas.forEach(fecha => {
+     fecha.addEventListener('click', seleccionarFecha);
+    });
+
+//Hora
+    const horarios = document.querySelectorAll('.horarios-doc');
+
+    function seleccionarHorario(event) {
+    horarios.forEach(horario => {
+        horario.classList.remove('seleccionado');
+    });
+
+    const horarioSeleccionado = event.currentTarget;
+    horarioSeleccionado.classList.add('seleccionado');
+    }
+
+    horarios.forEach(horario => {
+     horario.addEventListener('click', seleccionarHorario);
+    });
+
+
+function enviarHome() {
+  event.preventDefault();
+}
+
+
+
+function verificarTurno(){
+    var verHorario = document.querySelectorAll(".horarios-doc.seleccionado");
+    var verFecha = document.querySelectorAll(".fechas-doc.seleccionada");
+    var verDoc = document.querySelectorAll(".celda-doc.seleccionado");
+    console.log(verDoc.length+verFecha.length+verHorario.length)
+
+    if (verDoc.length === 0 && verFecha.length === 0 && verHorario.length === 0) {
+        alert("Por favor seleccione un doctor, horario y fecha para el turno");
+    }
+    else if (verDoc.length === 0 && verFecha.length === 0 && verHorario.length === 1) {
+        alert("Por favor seleccione un doctor y fecha para el turno");
+    }
+    else if (verDoc.length === 0 && verFecha.length === 1 && verHorario.length === 0) {
+        alert("Por favor seleccione un doctor y horario para el turno");
+    }
+    else if (verDoc.length === 1 && verFecha.length === 0 && verHorario.length === 0) {
+        alert("Por favor seleccione una fecha y horario para el turno");
+    }
+
+    else if (verDoc.length === 1 && verFecha.length === 0 && verHorario.length === 1) {
+        alert("Por favor seleccione una fecha para el turno");
+    }
+    else if (verDoc.length === 1 && verFecha.length === 1 && verHorario.length === 0) {
+        alert("Por favor seleccione un horario para el turno");
+    }
+    else if (verDoc.length === 0 && verFecha.length === 1 && verHorario.length === 1) {
+        alert("Por favor seleccione un doctor para el turno");
+    }
+    if (verDoc.length === 1 && verFecha.length === 1 && verHorario.length === 1) {
+        window.location.href="misturnos.html"
+    }
+
+}
+
+</script>
+
+</body>
+</html>

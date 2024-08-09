@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Inicio</title>
+</head>
+<body>
+  
+  
+    <header>
+        <a class="cerrar" href="index-medico.html">Cerrar Seción</a>
+        <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
+        <h2 class="titulo" >Bienvenid@ Doctor</h2><br>
+        <p>Cuida la salud de tus pacientes desde cualquier lugar</p><br>
+    </header>
+
+  <section>
+
+  <h2 class="busquedas"> Tus citas del dia... </h2>
+  
+    <div class="busq-rec">
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono4.png?v=1683596306056" alt="doctor uno">
+            <b>Paciente uno</b>
+            <p>Sintomatologia</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono3.png?v=1683596306758" alt="doctor uno">
+            <b>Paciente dos</b>
+            <p>Sintomatologia</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono2.png?v=1683596307494" alt="doctor uno">
+            <b>Paciente tres</b>
+            <p>Sintomatologia</p>
+        </div>
+        <div class="celda-doc">
+            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono1.png?v=1683596308171" alt="doctor uno">
+            <b>Paciente cuatro</b>
+            <p>Sintomatologia</p>
+        </div>
+    </div>
+  </section>
+  
+    
+  
+  
+  
+  <div class="info-doc">
+        <div class="info-doc-detalle">
+            <h3>Dr. aaaaaaaaa</h3><br>
+            <p>aaaaaaaaaaaaa</p><br>
+            <h3>Contacto</h3><br>
+            <p>aaaaaaaaaaaaaaaa@gmail.com</p><br>
+            <a href="perfil-doctor.html">Ir a perfil</a><br><br>
+            <button onclick="mostrarDoc()">Cerrar</button>
+        </div>
+    </div>
+
+    <nav>
+      
+        <ul>
+            <span class="nav-li" onclick="location.href='home-medico.html'">Home</span>
+            <span class="turno-li" onclick="location.href='mispacientes.html'">Pacientes</span>
+            <span class="nav-li" onclick="location.href='horarios-doc.html'">Horarios</span>
+            
+            
+        </ul>
+
+    </nav>
+  
+  
+<script>
+
+var docinfo = document.getElementsByClassName("celda-doc")
+
+for (var i = 0; i < docinfo.length; i++) {
+  docinfo[i].addEventListener("click", mostrarDoc);
+}
+
+  console.log(docinfo)
+
+function mostrarDoc() {
+      document.getElementsByClassName("datosperfil")[0].classList.toggle('mostrar');     
+
+}
+  
+
+
+</script>
+</body>
+</html>
+

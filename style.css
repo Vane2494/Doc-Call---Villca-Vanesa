@@ -1,0 +1,1061 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    background-color: #F0F6FF;
+}
+
+body#web-login{
+    background-color: #F0F6FF;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    height: 100vh;
+}
+
+button{
+    height: 35px;
+    border: none;
+    width: 50%;
+    font-size: 15px;
+    font-weight: 600;
+    color: White;
+    background-color: #274A8B;
+    border-radius: 10px;
+}
+
+
+.botones.cancelar{
+    background-color: grey;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 5px 0px 5px;
+    text-decoration: none;
+    margin: auto;
+ }
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    bottom: 0px;
+    padding: 15px 0px;
+    border-radius: 35px;
+    height: 100px;
+    bottom: -80px;
+    box-shadow: 0 0 20px #9fafce ;
+    text-align: center;
+}
+
+nav span{
+    margin: 5%;
+    color: #274A8B;
+    font-weight: bold;
+
+}
+
+nav span:hover{
+    color: gray;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+
+/* Login */
+
+.log-div{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 260px;
+    height: 60%;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    padding: 5% 10%;
+    box-shadow: 0 0 20px #9fafce;
+}
+
+.input-type{
+    padding: 5%;
+    border: solid grey 1px;
+    border-radius: 50px;
+    margin-top: 5%;
+    width: 160%;
+    margin: auto;
+    position: relative;
+    left: -33%;
+    margin-top: 10%;
+}
+
+
+.img-logo{
+    max-width: 150px;
+}
+
+.texto-pass{
+    display: flex;
+    align-items: center;
+    width: 250%;
+    position: relative;
+    left: -50%;
+    margin: 5%;
+}
+
+.recordar-pass, .olvide-pass{
+    display: inline-flex;
+    width: 50%;
+    white-space: nowrap;
+    padding: 2%
+;
+}
+
+.redirigir{
+    text-decoration: none;
+    color: #274A8B;
+    font-weight: bold;
+}
+
+.redirigir:hover{
+    text-decoration: underline;
+    color: #274A8B;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px){
+  .input-type{
+    padding: 5%;
+    border: solid grey 1px;
+    /* border-radius: 50px; */
+    margin-top: 5%;
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+    position: relative;
+    left: -5%;
+}
+
+.log-div{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-width: 260px;
+  height: 60%;
+  border-radius: 50px;
+  align-items: center;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 7%;
+  padding: 5% 10%;
+  box-shadow: 0 0 20px #9fafce;
+}
+.texto-pass{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  left: -13%;
+  margin: 5%;
+}
+
+}
+
+/* Home */
+
+header{
+    position: relative;
+    top: -20px;
+    left: 0px;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #9fafce;
+    font-size:small;
+    color: #515050;
+
+}
+
+.logo-textless{
+    margin-left: 10%;
+    width: 7%;
+}
+
+header h2, header p{
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.busquedas{
+    margin-top: 5px ;
+    margin-left: 5% ;
+    font-size:small;
+    color: #515050;
+}
+
+.busq-rec{
+    width: 100%;
+    text-align: center;
+}
+
+.celda-doc{
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding-top:  20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 3%;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #9fafce;
+    color: #515050;
+}
+
+.celda-doc img{
+    position: inherit;
+    width: 50%;
+    margin: auto; 
+    display: block;
+}
+
+.info-doc{
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.info-doc.mostrar{
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffffa5;
+    top: 0px;
+    left: 0px;
+}
+
+.especialista{
+    margin: 1% auto 2%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce;
+    text-align: center;
+}
+
+.especialista img{
+    border-radius: 100%;
+    position: relative;
+    top: -0px;
+}
+
+@media screen and (max-width: 500px){
+  .logo-textless{
+    margin-left: 10%;
+    width: 20%;
+}
+
+body#web-home{
+  padding-bottom: 20%;
+}
+
+.especialista{
+    width: 20%; 
+    height: auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce;
+    text-align: center;
+}
+}
+
+
+/* Reservar Turno */
+
+body#web-reserva{
+    text-align: center;
+    color: #274A8B;
+}
+
+body#web-reserva form{
+    position: relative;
+    top: 50px;
+}
+
+body#web-reserva .titulo{
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 150px;
+
+}
+
+.selector-horarios, .selector-fechas{
+    margin-top: 20px;
+}
+
+.selector-horarios{
+    margin-bottom: 50px;
+}
+
+
+.fin-form{
+    position: relative;
+    bottom: 0px;
+    margin: auto;
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+#pop-up-exitoso{
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+  
+#pop-up-exitoso.mostrar{
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffffa5;
+    top: 0px;
+    left: 0px;
+  }
+
+  .pop-up{
+    margin: 20% auto 5%;
+    width: 300px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+  }
+
+  .celda-doc.seleccionado{
+    background-color: #274A8B;
+    color: white;
+}
+
+.fechas-doc, .horarios-doc{
+    padding: 7px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #9fafce ;
+    display: inline-block;
+    width: 150px;
+    margin-top: 20px;
+    margin: 5px;
+    height: auto;
+}
+
+.fechas-doc.seleccionada, .horarios-doc.seleccionado{
+    background-color: #274A8B;
+    color: white;
+}
+
+.selector-fechas, .selector-horarios{
+    position: relative;
+    top: -80px;
+
+}
+
+@media screen and (max-width: 500px){
+  .fechas-doc, .horarios-doc{
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #9fafce;
+  color: #515050;
+    
+}
+
+}
+/* Home Medico */
+
+ .cerrar {
+  text-decoration: none;
+  color:#274A8B; 
+  text-align:right;
+  padding: 20px; 
+  position: relative;
+  font-weight: bolder;
+  font-size:18px;
+}
+
+
+/* Mis Turnos */
+
+@media screen and (max-width: 700px){
+  .contenedorfiltro button.boton{
+    transform: scale(0.8);
+    margin: 0px -5px;
+    position: relative;
+    top: -20px;
+  }
+
+  .contenedorfiltro{
+    display: inline-block
+  }
+
+  .proximoturno {
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 0 0 20px #9fafce;
+    height: 500px;
+    width: 200px;
+    position: relative;
+    float: left;
+    margin: 8px;
+    padding: auto;
+    text-align: center;
+  }
+
+
+
+}
+
+body#web-turnos header{
+  position: relative;
+  top: -20px;
+  left: 0px;
+  display: flex;
+  white-space: nowrap;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px #9fafce;
+  font-size:small;
+  color: #515050;
+}
+
+.encabezado {
+    background-color: white;
+    border-radius: 30px;
+    height: 150px;
+    box-shadow: 0 0 20px #9fafce ;
+    position: relative;
+    top: -40px;
+}
+.contenedorp {
+    position:relative;
+    padding-bottom: 90%;
+    margin-left: 50px;
+}
+
+.contenedorfiltro{
+  position:relative;
+  top:40px;
+  left: 50px;
+  width: 80%;
+  display: block;
+
+}
+ 
+  .boton{
+    color: White;
+    background-color:#274A8B;
+    border-radius: 4px;
+    margin-bottom:20px;
+    
+  }
+.botonA{
+    outline: none;
+    display: inline-block;
+    color: White;
+    background-color:#274A8B;
+    border-radius: 4px;
+    margin-bottom:20px;
+    height:35px;
+    width:200PX;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+  }
+
+.botonI{
+   
+    color: White;
+    background-color:#274A8B;
+    border-radius: 4px;
+    margin-bottom:20px;
+    
+    
+  }
+  
+.botones{
+  cursor:pointer;
+  color: #274A8B;
+  text-decoration: none;
+  margin-bottom: 40px;
+  display: block;
+  }
+
+
+
+
+a.botones:hover, button:hover{
+    cursor:grabber;
+    transform: scale(1.1);
+    transition: .1s;
+    animation: ease-in-out;
+
+  }
+
+
+
+button:hover  {
+      background: #7FA9DB;
+    }
+  
+  .proximoturno{
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 0 0 20px #9fafce;
+    height: 500px;
+    width:400px;
+    position: relative;
+    float: left;
+    margin: 8px;
+    padding:auto;
+    text-align: center;
+  }
+
+ 
+.colorgreen {
+  color:green;
+  top:0;
+  margin:none;
+  
+}
+
+.colormorado {
+  color:purple;
+  top:0;
+  margin:none;
+  
+}
+.colororange {
+  color:orange;
+  top:0;
+  margin:none;
+  
+}
+.colorred {
+  color:red;
+  top:0;
+  margin:none;
+  
+}
+
+
+.contenedorfiltro .ct_item-active{
+	background: #2D3E50;
+}
+
+.contenedorfiltro button{
+    margin-right: 25px;
+    width: auto;
+    padding: 0px 10px;
+    float: left;
+}
+
+/* Perfil del Especialista1*/
+#idEspecialista1{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idEspecialista1.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+/* Perfil del Especialista2*/
+#idEspecialista2{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idEspecialista2.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+/* Perfil del Especialista3*/
+#idEspecialista3{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idEspecialista3.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.especialista{
+    margin: 1% auto 2%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+/* Ver Informe*/
+#idVerInforme{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idVerInforme.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.verinforme{
+    margin: 6% auto 3%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+/* Ver Historial*/
+#idHistorial{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idHistorial.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.historial{
+    margin: 6% auto 3%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+/* ESTUDIOS*/
+
+#idEstudios{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idEstudios.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.Estudios{
+    margin: 10% auto 5%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+/* mostrarcancelarturno*/
+
+#idcancelarturno{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idcancelarturno.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.cancelarturno{
+    margin: 10% auto 5%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+
+/* tabla */
+
+table {
+      width: auto;
+      border-collapse: collapse;
+      padding: 20px;
+      
+    }
+    
+    th, td {
+      border: 2px solid white;
+      padding: 8px;
+      cursor: pointer;
+      text-align: center;
+      width: 20%;
+      
+    }
+    
+
+    th {
+      background-color:#274A8B;
+      color: White;
+     }
+
+    td {
+      
+      color: #274A8B;
+     }
+    
+    .selected {
+      
+      background-color: #7FA9DB;
+}
+/*mostrarmodificarturno*/
+
+#idmodificarturno{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#idmodificarturno.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.modificarturno{
+    margin: 2% auto 5%;
+    width: 550px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+  
+}
+ /*modificado*/
+
+  #idmodificdo{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+#idmodificado.mostrar{
+  display:block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffffa5;
+  top: 0px;
+  left: 0px;
+}
+
+.modificado{
+    margin: 10% auto 5%;
+    width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+}
+
+#detalle{
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+  #detalle.mostrar{
+    display:block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffffa5;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+  }
+  
+  .informe-detalle{
+      margin: 10% auto 5%;
+      width: 300px;
+      height: auto;
+      background-color: #ffffff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #9fafce ;
+  }
+
+
+  /* Perfil */
+
+  .datosperfil{
+    margin: auto;
+    width: 50%;
+    background-color: white;
+    position: relative;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0 0 20px #9fafce ;
+    top: 20px;
+    padding: 30px;
+}
+
+.datos{
+  float: left;
+}
+
+.datosperfil img.osde{
+    width: 20%;
+}
+
+.datosperfil img.perfil{
+    width: 20%;
+    min-width: 150px;
+    position: absolute;
+    right: 15%;
+    z-index: 10;
+    border-radius: 100%;
+    top: 15%;
+}
+
+.proximoturnoperfil{
+    margin-left: 800px;
+    width:20%;
+    justify-content:center;
+    align-items:center;
+    background-color: white;
+    border-radius: 30px;
+    height: 250px;
+    box-shadow: 0 0 20px #9fafce ;
+    margin-top: 80px;
+    margin-bottom: 150px;
+    text-align:center;
+    
+  }
+
+  @media screen and (max-width: 600px){
+    .datosperfil img.perfil{
+      width: 30%;
+      position: fixed;
+      right: 15%;
+      top: 15%;
+      z-index: 10;
+      border-radius: 100%;
+  }
+
+  .datosperfil{
+    width: 80%;
+  }
+  }
+
+  /* Consulta */
+
+  .consul-div{
+    background-color: white;
+    border-radius: 50px;
+    width: 60%;
+    margin: auto;
+    margin-top:50px;
+    padding: 50px;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 20px #9fafce;
+    height: auto;
+  }
+  body#web-consulta button.cancelar{
+    position: relative;
+    top: -40px;
+    width: 40%;
+  }
+
+
+@media screen and (max-width: 500px){
+body#web-consulta button.cancelar{
+  position: relative;
+  top: -40px;
+  width: 70%;
+  }
+body#web-consulta img{
+    width: 30%;
+}
+
+.consul-div{
+  margin-top: 100px;
+}
+
+}
+
+.consul-div h3{
+    color: #515050;
+    font-weight: bolder;
+}
+
+  .modal_container{
+    display: flex;
+    margin: 10% auto 5%;
+    width: 300px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #9fafce ;
+    opacity:0;
+    pointer-events: none;
+    position: fixed;
+ }
+ 
+ .show{
+   pointer-events:auto;
+   opacity: 1;
+   
+ }
+
+ .consul-div .logo-textless{
+    width: 10%;
+    position: relative;
+    margin-bottom: 50px;
+    left: -15px;
+ }
+
+
+ .consul-div button{
+    margin-top: 20px;
+ }
+
+ body#web-consulta button{
+    height: 35px;
+    border: none;
+    width: 20%;
+    font-size: 15px;
+    font-weight: 600;
+    color: White;
+    background-color: #274A8B;
+    border-radius: 10px;
+}
+
+
+#reservar-turno{
+  transform: scale(0.5);
+  width: 500px;
+  text-align: center;
+  position: fixed;
+  right: 0px;
+  height: auto;
+  z-index: 10;
+  background-color: #ffffff;
+  top: -100px;
+}
+
+

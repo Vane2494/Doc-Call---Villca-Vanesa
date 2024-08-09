@@ -1,0 +1,600 @@
+<html>
+ <head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   <script src="script.js"></script>
+ </head>
+
+ <body> 
+   <header class="encabezado">
+        <a class="cerrar" href="index-medico.html">Cerrar Seción</a>
+        <h2 class="titulo"> Mis Pacientes </h2>
+        <p>
+         Aqui encontraras tus turnos asignados. 
+        </p>
+     <br>
+    <div class="contenedorfiltro">
+     
+      <button  class="todo" onclick="MostrarElementostodo()"> Todos </button>
+      <button  class="proximo"  onclick="MostrarElementosproximos()" >  Proximos a iniciar </button>
+      <button  class="tratamiento" onclick="MostrarElementostratamiento()" >  En Tratamiento </button>
+      <button  class="finalizado" onclick="MostrarElementosfinalizado()">  Finalizados </button>
+      <button  class="cancelado" onclick="MostrarElementoscancelado()">  Cancelados </button>
+      
+    </div>
+   </header>
+   <div class="contenedorp"  > 
+    <div class="proximoturno" id="proximo" >
+      <br>
+      <h2 class="colorgreen"> Proximo a Iniciar </h2>
+        <h2> 22 JUL 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        <a  onclick="mostrarespecialista1()">
+          María López
+        </a>
+        <p>
+          18:30 hs
+        </p>
+        <br>
+        <button class="boton" onclick="location.href='entrar-consulta.html'"> Entrar a la consulta</button>
+        <button class="boton" onclick="mostrarmodificarturno()" > Modificar consulta</button>
+        <button class="boton" onclick="mostrarcancelarturno()"> Cancelar consulta</button>
+        <button class="boton" onclick="mostrardetalle()"> Ver detalle</button>
+      <br>
+      <br>
+      <br>
+      
+     
+      
+      <div id="idmodificarturno">
+        <div class="modificarturno">
+          
+           <h2>Especialista: </h2> 
+           
+           <p> DRA. LAMAS Silvia </p>
+           <h2>Fechas disponibles: </h2>
+           <br>
+          <div>
+         
+            <table>
+              <tr>
+               
+               <th>Lunes 12/06/2022</th>
+               <th>Martes 13/06/2022</th>
+               <th>Miércoles 14/06/2022</th>
+               <th>Jueves 15/06/2022</th>
+               <th>Viernes 16/06/2022</th>
+               </tr>
+                 <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">08:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">14:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">08:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">14:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">08:00</td>
+                  </tr>
+                 <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">09:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">15:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">09:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">15:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">09:00</td>
+                </tr>
+              <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">10:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">16:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">10:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">16:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">10:00</td>
+                  </tr>
+                 <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">11:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">17:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">11:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">17:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">11:00</td>
+                </tr>
+              
+              <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">12:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">18:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">12:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">18:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">-</td>
+                  </tr>
+                 <tr>
+
+                  <td onclick="selectCell(this)" data-day="lunes">13:00</td>
+                  <td onclick="selectCell(this)" data-day="martes">19:00</td>
+                  <td onclick="selectCell(this)" data-day="miércoles">13:00</td>
+                  <td onclick="selectCell(this)" data-day="jueves">19:00</td>
+                  <td onclick="selectCell(this)" data-day="viernes">-</td>
+                </tr>
+              
+              
+              
+           </table>
+               
+          </div>
+           <br>
+           <button  class="boton" onclick="mostrarmodificado()"> Modificar</button>
+           <button  class="boton" onclick="mostrarmodificarturno()"> Cerrar</button>
+         </div>
+     
+        <div id="idmodificado">
+         <div class="modificado">
+          <h2>
+            Se a modificado con exito tu turno
+          </h2>
+           <br>
+           <br>
+          <button  class="boton" onclick="mostrarmodificarturno()">cerrar</button>
+         </div>
+         
+        </div>
+        </div>
+      
+        <div id="idEspecialista1">
+        <div class="especialista">
+          <h2>   </h2>
+          <br>
+           <img class="perfil" src="https://platform.docplanner.com/img/general/infopages/online-consultations-patients/woman-5.png?2854929810" alt="fotoperfil">
+           <br>
+           <h3> Sobre mi: </h3>
+           <p> Altamente capacitada, trabajo incansablemente para brindar la mejor atención medica a mis pacientes. </p>
+           <br>
+           <h3> Obra Social </h3>
+           <p> Swiss medical / Osde / AcaSalud </p>
+           <br>
+          <h3> Particular (sin obra social) </h3>
+           <br>
+           <h3> Atiende a: </h3>
+           <p>  Adultos, niños de cualquier edad</p>
+            <br>
+           
+           <button class="boton"  onclick="mostrarespecialista1()"> Cerrar</button>
+        </div>
+        
+      </div>
+      
+      <div  id="idcancelarturno">
+        <div class="cancelarturno">
+          <h2>
+            ¿Seguro que deseas cancelar la consulta?
+          </h2>
+          <br>
+          <input  type="checkbox" name="cb-terminosservicio" alert="Selecciona la casilla si deseas continuar" /> Dicho cancelamineto le generara un recargo
+          
+          
+          <br>
+          ¿Esta de acuerdo con ello?
+          <br>
+          <br>
+          <h3>
+            Ingrese el motivo de su cancelamiento:
+          </h3>
+          <br>
+          <form>
+             <textarea rows="5" cols="50"></textarea><br><br>
+             
+             <button class="boton"> Aceptar</button>
+             <button class="boton"> Cerrar</button>
+          </form>
+                  
+          
+        </div>
+        
+      </div>
+      
+      <div id="detalle">
+        <div class="informe-detalle">
+          <h2> Detalle de la consulta: </h2>
+          <br>
+           <p> </p>
+          <h3> Obra Social: </h3>
+           <p> Swiss medical</p>
+          <h3> Motivos de la consulta: </h3>
+           <p> Dolor de garganta, opalpitaciones Y dolor de cabeza</p>
+          <h3> Agregar archivos: </h3>
+          <br>
+           <input class="botonI" type="file" name="archivosubido">
+           <button class="boton"  onclick="mostrardetalle()"> Cerrar</button>
+        </div>
+        
+      </div>
+ 
+     </div>
+   
+    <div class="proximoturno" id="tratamiento">
+      <br>
+      <h2 class="colororange"> En tratamiento </h2>
+           <h2> 28 JUL 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        <a  onclick="mostrarespecialista2()">
+          Alejandro Rodríguez
+        </a>
+        <p>
+          18:00 hs
+        </p>
+        <br>
+        
+        <button class="boton" onclick="location.href='entrar-consulta.html'"> Entrar a la consulta</button>
+        <button class="boton" onclick="mostrarmodificarturno()"> Modificar consulta</button>
+        <button class="boton" onclick="mostrarcancelarturno()"> Cancelar consulta</button>
+        <button  class="boton" onclick= "mostrarverinforme()"> Ver informe</button>
+    </div>
+     
+      <div id="idEspecialista2">
+        <div class="especialista">
+          <h2>   </h2>
+          <br>
+           <img class="perfil" src="https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/9ab307/9ab307609b8622a95f10a2489174da20_medium_square.jpg" alt="fotoperfil">
+           <br>
+           <h3> Sobre mi: </h3>
+           <p> Altamente capacitado, trabajo incansablemente para brindar la mejor atención medica a mis pacientes. </p>
+           <br>
+           <h3> Obra Social </h3>
+           <p> Swiss medical / Osde / AcaSalud </p>
+           <br>
+          <h3> Particular (sin obra social) </h3>
+           <br>
+           <h3> Atiende a: </h3>
+           <p>  Adultos, niños de cualquier edad</p>
+            <br>
+           
+           <button class="boton"  onclick="mostrarespecialista2()"> Cerrar</button>
+        </div>
+        
+      </div>
+     
+     <div id="idVerInforme">
+        <div class="verinforme">
+          <h2> Ver Informe </h2>
+          <br>
+           <h3> Obra Social: </h3>
+           <p> Swiss medical</p>
+          <h3> Motivos de la consulta: </h3>
+           <p> Dolor de espalda </p>
+          <h3> Tratamiento: </h3>
+           <p> Aplique calor o hielo en el área que presenta el dolor. Use hielo durante las primeras 48 a 72 horas, luego use calor.</p>
+           <h3> Medicamentos: </h3>
+          <p> Ibuprofeno 400 gr.</p>
+          <br>
+          <h3> Agregar archivos: </h3>
+          <br>
+           <input class="botonI" type="file" name="archivosubido">
+           <button class="boton"  onclick="mostrarverinforme()"> Cerrar</button>
+        </div>
+        
+      </div>
+     
+    <div class="proximoturno" id="finalizado">
+      <br>
+       <h2 class="colorred"> Finalizado </h2>
+        <h2> 12 MAY 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        
+          <a  onclick="mostrarespecialista3()" > Ana García </a>
+          
+       
+        <p>
+          19:00 hs
+        </p>
+        <br>
+        <button class="boton" onclick="mostrarhistorial()" > Historial </button>
+        <button class="boton" onclick="mostrarestudios()"> Estudios </button>
+        <br>
+        <a href="https://imgv2-1-f.scribdassets.com/img/document/534320633/original/c1d04581f8/1680308059?v=1"
+           class="botonA"> 
+          Certificado </a>
+      </div>
+       <div id="idEspecialista3">
+        <div class="especialista">
+          <h2> Javier Pérez </h2>
+          <br>
+           <img class="perfil" src="https://platform.docplanner.com/img/general/infopages/online-consultations-patients/man-1.png?4039994390" alt="fotoperfil">
+           <br>
+           <h3> Sobre mi: </h3>
+           <p> Altamente capacitado, trabajo incansablemente para brindar la mejor atención medica a mis pacientes. </p>
+           <br>
+           <h3> Obra Social </h3>
+           <p> Swiss medical / Osde / AcaSalud </p>
+           <br>
+          <h3> Particular (sin obra social) </h3>
+           <br>
+           <h3> Atiende a: </h3>
+           <p>  Adultos, niños de cualquier edad</p>
+            <br>
+           
+           <button class="boton"  onclick="mostrarespecialista3()"> Cerrar</button>
+        </div>
+        
+      </div>
+     
+     
+       <div id="idHistorial">
+        <div class="historial">
+          <h2> Historial </h2>
+          <br>
+           <h3> Obra Social: </h3>
+           <p> Swiss medical</p>
+           <br>
+          <h3> Motivos de la consulta: </h3>
+           <p> Dolor en el pecho. Dificultad para respirar. Frecuencia cardíaca anormalmente rápida. </p>
+            <br>
+           <h3> Tratamiento: </h3>
+           <p> Monitoreo del ritmo cardiaco</p>
+            <br>
+           <h3> Medicamentos: </h3>
+          <p> Ibuprofeno 400 gr.</p>
+          <br>
+          <h3> Antecedentes </h3>
+           <p> Familiares con diabetes</p>
+          <br>
+           <button class="boton"  onclick="mostrarhistorial()"> Cerrar</button>
+        </div>
+        
+      </div>
+        
+        
+        <div id="idEstudios">
+          <div class="Estudios">
+            <h2> Estudios realizados </h2>
+            <br>
+              <a href="https://online.fliphtml5.com/qpdjb/dpxe/files/large/1.jpg?1561691152">
+                Lavoratorio </a>
+             <br>
+             <br>
+              <a href="https://imgv2-2-f.scribdassets.com/img/document/410215028/original/2796921e9b/1682526062?v=1">
+                Electrocardiograma </a>
+              <br>
+              <br>
+              <a href="https://imgv2-2-f.scribdassets.com/img/document/483984004/original/efceb2e20f/1682407554?v=1">
+                Electroencefalograma </a>
+            <br>
+            <br>
+            <br>
+            <button  class="boton" onclick="mostrarestudios()">Cerrar</button>
+          
+          </div>
+           
+       </div>
+      
+      <div class="proximoturno" id="proximo1" >
+      <br>
+      <h2 class="colorgreen"> Proximo a Iniciar </h2>
+        <h2> 28 JUL 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        <a  onclick="mostrarespecialista1()">
+          Carmen Martínez
+        </a>
+        <p>
+          18:30 hs
+        </p>
+        <br>
+        <button class="boton" onclick="location.href='entrar-consulta.html'"> Entrar a la consulta</button>
+        <button class="boton" onclick="mostrarmodificarturno()"> Modificar consulta</button>
+        <button class="boton" onclick="mostrarcancelarturno()"> Cancelar consulta</button>
+        <button class="boton" onclick="mostrardetalle()"> Ver detalle</button>
+      </div>
+      
+      <div class="proximoturno" id="proximo2" >
+      <br>
+      <h2 class="colorgreen"> Proximo a Iniciar </h2>
+        <h2> 02 AGO 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        <a  onclick="mostrarespecialista1()">
+          Manuel Fernández
+        </a>
+        <p>
+          18:30 hs
+        </p>
+        <br>
+        <button class="boton" onclick="location.href='entrar-consulta.html'"> Entrar a la consulta</button>
+        <button class="boton" onclick="mostrarmodificarturno()"> Modificar consulta</button>
+        <button class="boton" onclick="mostrarcancelarturno()"> Cancelar consulta</button>
+        <button class="boton" onclick="mostrardetalle()"> Ver detalle</button>
+      </div>
+       
+       <div class="proximoturno" id="finalizado1">
+      <br>
+       <h2 class="colorred"> Finalizado </h2>
+        <h2> 2 MAY 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          Cardiologia
+        </p>
+        
+          <a  onclick="mostrarespecialista3()" > Carlos Sánchez</a>
+          
+       
+        <p>
+          19:00 hs
+        </p>
+        <br>
+        <button class="boton" onclick="mostrarhistorial()" > Historial </button>
+        <button class="boton" onclick="mostrarestudios()"> Estudios </button>
+        <br>
+        <a href="https://imgv2-1-f.scribdassets.com/img/document/534320633/original/c1d04581f8/1680308059?v=1"
+           class="botonA"> 
+          Certificado </a>
+      </div>
+     
+      <div class="proximoturno" id="cancelado">
+      <br>
+       <h2 class="colormorado"> Cancelado </h2>
+        <h2> 2 MAY 2023 </h2>
+         <img src="https://png.pngtree.com/png-vector/20190627/ourlarge/pngtree-calendar-icon-png-image_1521539.jpg" widht="100 px"  height="100 px" alt="calendario">
+        <p>
+          
+        </p>
+        
+          <a  onclick="mostrarespecialista3()" > Laura González </a>
+          
+       
+        <p>
+          19:00 hs
+        </p>
+        <br>
+        <button class="boton" onclick="mostrarhistorial()" > Historial </button>
+        <button class="boton" onclick="mostrarestudios()"> Estudios </button>
+        <br>
+        <a href="https://imgv2-1-f.scribdassets.com/img/document/534320633/original/c1d04581f8/1680308059?v=1"
+           class="botonA"> 
+          Certificado </a>
+      </div>
+     
+     
+      </div>
+     
+   
+   
+   
+   
+   
+   <nav>
+      
+        <ul>
+            <span class="nav-li" onclick="location.href='home-medico.html'">Home</span>
+            <span class="turno-li" onclick="location.href='mispacientes.html'">Pacientes</span>
+            <span class="nav-li" onclick="location.href='horarios-doc.html'">Horarios</span>
+        </ul>
+
+    </nav>
+   <script>
+   
+     function mostrardetalle() {
+    document.getElementById("detalle").classList.toggle('mostrar');     
+     
+}
+     
+     function mostrarverinforme() {
+    document.getElementById("idVerInforme").classList.toggle('mostrar');     
+     
+}
+     function mostrarmodificarturno(){
+    document.getElementById("idmodificarturno").classList.toggle('mostrar');   
+     }
+     
+     function mostrarmodificado(){
+    document.getElementById("idmodificado").classList.toggle('mostrar');   
+     }
+     
+          
+     function mostrarcancelarturno(){
+    document.getElementById("idcancelarturno").classList.toggle('mostrar');   
+     }
+     
+     function mostrarestudios(){
+    document.getElementById("idEstudios").classList.toggle('mostrar');   
+     }
+     
+     function mostrarhistorial(){
+    document.getElementById("idHistorial").classList.toggle('mostrar');   
+     }
+     
+     function mostrarespecialista3(){
+    document.getElementById("idEspecialista3").classList.toggle('mostrar');   
+     }
+     function mostrarespecialista2(){
+    document.getElementById("idEspecialista2").classList.toggle('mostrar');   
+     }
+     
+     function mostrarespecialista1(){
+    document.getElementById("idEspecialista1").classList.toggle('mostrar');   
+     }
+     
+     
+     function mostrarfiltro(){
+    document.getElementById("idEspecialista1").classList.toggle('mostrar');   
+     }
+     
+     function MostrarElementosproximos(){
+       document.getElementById("proximo").style="display:block"; 
+       document.getElementById("proximo1").style="display:block";
+       document.getElementById("proximo2").style="display:block";
+       document.getElementById("tratamiento").style="display:none";
+       document.getElementById("finalizado").style="display:none";
+       document.getElementById("finalizado1").style="display:none";
+       document.getElementById("cancelado").style="display:none";
+     }
+       
+     function MostrarElementostratamiento(){
+       document.getElementById("proximo").style="display:none";
+       document.getElementById("proximo1").style="display:none";
+       document.getElementById("proximo2").style="display:none";
+       document.getElementById("tratamiento").style="display:block";
+       document.getElementById("finalizado").style="display:none";
+       document.getElementById("finalizado1").style="display:none";
+       document.getElementById("cancelado").style="display:none";
+     }
+     
+   function MostrarElementosfinalizado(){
+       document.getElementById("proximo").style="display:none";
+       document.getElementById("proximo1").style="display:none";
+       document.getElementById("proximo2").style="display:none";
+       document.getElementById("tratamiento").style="display:none";
+       document.getElementById("finalizado").style="display:block";
+       document.getElementById("finalizado1").style="display:block";
+       document.getElementById("cancelado").style="display:none";
+     }
+       
+      
+   function MostrarElementostodo(){
+       document.getElementById("proximo").style="display:block"; 
+       document.getElementById("proximo1").style="display:block";
+       document.getElementById("proximo2").style="display:block";
+       document.getElementById("tratamiento").style="display:block";
+       document.getElementById("finalizado").style="display:block";
+       document.getElementById("finalizado1").style="display:block";
+       document.getElementById("cancelado").style="display:block";
+     }
+  
+     function MostrarElementoscancelado(){
+       document.getElementById("proximo").style="display:none"; 
+       document.getElementById("proximo1").style="display:none";
+       document.getElementById("proximo2").style="display:none";
+       document.getElementById("tratamiento").style="display:none";
+       document.getElementById("finalizado").style="display:none";
+       document.getElementById("finalizado1").style="display:none";
+       document.getElementById("cancelado").style="display:block";
+     }
+     
+     
+    var selectedCell = null;
+    
+    function selectCell(cell) {
+      if (selectedCell !== null) {
+        selectedCell.classList.remove("selected");
+      }
+      
+      cell.classList.add("selected");
+      selectedCell = cell;
+    }
+  
+
+   </script>
+</body>
+
+</html>
