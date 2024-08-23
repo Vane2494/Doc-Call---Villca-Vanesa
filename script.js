@@ -1,4 +1,6 @@
 /**/
+
+
 const element = document.getElementById("btnSubmit");
 element.addEventListener("click", validarForm);
 

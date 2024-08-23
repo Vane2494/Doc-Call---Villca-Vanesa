@@ -19,7 +19,7 @@ body#web-login{
 button{
     height: 35px;
     border: none;
-    width: 50%;
+    width: 60%;
     font-size: 15px;
     font-weight: 600;
     color: White;
@@ -28,19 +28,35 @@ button{
 }
 
 
-.botones.cancelar{
-    background-color: grey;
+button.botones {
+    background-color: #274A8B;
+    display: block;
     border-radius: 10px;
     height: 35px;
     border: none;
     color: white;
-    width: 100px;
+    width: 150px;
     font-size: 15px;
     font-weight: 600;
-    padding: 10px 5px 0px 5px;
+    padding: 5px 5px 0px 5px;
     text-decoration: none;
     margin: auto;
  }
+
+
+ .cancelar {
+  background-color: rgb(124, 125, 124);
+  border-radius: 10px;
+  height: 35px;
+  border: none;
+  color: white;
+  width: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 5px 0px 5px;
+  text-decoration: none;
+  margin: auto;
+}
 
 nav{
     width: 100%;
@@ -122,17 +138,30 @@ nav span:hover{
 ;
 }
 
-.redirigir{
+ .redirigir{
+    display: block;
+    margin: 15px auto; 
     text-decoration: none;
     color: #274A8B;
     font-weight: bold;
 }
+
+.contenedor-div{
+    display: block;
+    margin: 50px;
+}
+
+
+
+
 
 .redirigir:hover{
     text-decoration: underline;
     color: #274A8B;
     font-weight: bold;
 }
+
+
 
 @media screen and (max-width: 500px){
   .input-type{
