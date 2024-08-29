@@ -213,7 +213,7 @@ header{
     background-color: white;
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     border-radius: 25px;
     box-shadow: 0 0 20px #9fafce;
     font-size:small;
@@ -440,6 +440,7 @@ body#web-reserva .titulo{
   position: relative;
   font-weight: bolder;
   font-size:18px;
+  display: inline-block;
 }
 
 
@@ -926,7 +927,7 @@ table {
   }
 
 
-  /* Perfil */
+ 
 
   .datosperfil{
     margin: auto;
@@ -936,7 +937,7 @@ table {
     border-radius: 50px;
     position: relative;
     box-shadow: 0 0 20px #9fafce ;
-    top: 20px;
+    top: 30px;
     padding: 30px;
 }
 
@@ -949,13 +950,16 @@ table {
 }
 
 .datosperfil img.perfil{
-    width: 20%;
+    width: 30%;
+    height: auto; 
     min-width: 150px;
     position: absolute;
     right: 15%;
     z-index: 10;
-    border-radius: 100%;
+    border-radius: 60%;
     top: 15%;
+
+
 }
 
 .proximoturnoperfil{
