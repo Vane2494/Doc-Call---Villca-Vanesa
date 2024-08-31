@@ -7,9 +7,13 @@ fetch('footer.html')
     document.getElementById('footer-placeholder').innerHTML = data; 
 });
 
-/*  */
+/* footer medico*/
 
-
+fetch('footer-medico.html') 
+.then(response => response.text()) 
+.then(data => { 
+    document.getElementById('footer-medico').innerHTML = data; 
+});
 
 
 

@@ -15,7 +15,7 @@
         <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
         <h2 class="titulo" >Bienvenid@ </h2>
         <p>Cuida tu salud desde cualquier lugar</p>
-        
+        <a class="cerrar" href="index.html">Cerrar Seción</a>
     </header>
 
   <section>
@@ -108,16 +108,16 @@
     <script>
         var docinfo = document.getElementsByClassName("celda-doc")
 
-            for (var i = 0; i < docinfo.length; i++) {
-            docinfo[i].addEventListener("click", mostrarDoc);
-            }
+    for (var i = 0; i < docinfo.length; i++) {
+    docinfo[i].addEventListener("click", mostrarDoc);
+    }
 
-            console.log(docinfo)
+    console.log(docinfo)
 
-            function mostrarDoc() {
-                document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
+    function mostrarDoc() {
+        document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
 
-            }
+    }
     </script>
 </body>
 
