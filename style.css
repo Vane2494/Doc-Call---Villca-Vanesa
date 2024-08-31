@@ -932,9 +932,7 @@ table {
   }
 
 
- 
-
-  .datosperfil{
+   .datosperfil{
     margin: auto;
     width: 50%;
     background-color: white;
@@ -943,11 +941,12 @@ table {
     position: relative;
     box-shadow: 0 0 20px #9fafce ;
     top: 30px;
-    padding: 30px;
-}
+    padding: 35px;
+   }
 
 .datos{
   float: left;
+ 
 }
 
 .datosperfil img.osde{
