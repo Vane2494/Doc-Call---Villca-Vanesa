@@ -256,6 +256,7 @@ header h2, header p{
     border-radius: 30px;
     box-shadow: 0 0 20px #9fafce;
     color: #515050;
+
 }
 
 .celda-doc img{
@@ -263,6 +264,10 @@ header h2, header p{
     width: 50%;
     margin: auto; 
     display: block;
+}
+
+.celda-doc:hover {
+ transform: scale(1.1);
 }
 
 .info-doc{
@@ -619,7 +624,7 @@ button:hover  {
 
 .contenedorfiltro button{
     margin-right: 25px;
-    width: auto;
+    width:15%;
     padding: 0px 10px;
     float: left;
 }
