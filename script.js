@@ -1,4 +1,16 @@
 /**/
+/* footer */
+
+fetch('footer.html') 
+.then(response => response.text()) 
+.then(data => { 
+    document.getElementById('footer-placeholder').innerHTML = data; 
+});
+
+/*  */
+
+
+
 
 
 const element = document.getElementById("btnSubmit");
@@ -37,6 +49,4 @@ close.addEventListener('click', () => {
   modal_container.classList.remove('show');
 } );
 
-/* registrarse */
 
- 

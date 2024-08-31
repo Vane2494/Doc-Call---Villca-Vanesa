@@ -15,10 +15,12 @@
         <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
         <h2 class="titulo" >Bienvenid@ </h2>
         <p>Cuida tu salud desde cualquier lugar</p>
-        <a class="cerrar" href="index.html">Cerrar Seción</a>
+        
     </header>
 
   <section>
+
+  <div id="footer-placeholder"></div> 
 
   <h2 class="busquedas"> Busquedas recientes... </h2>
   
@@ -91,9 +93,7 @@
            <button class="boton"  onclick="mostrarDoc()" > Cerrar</button>
      </div>
   </div>
-  
-  
-  
+   
   <div class="info-doc">
         <div class="info-doc-detalle">
             <h3>Dr. aaaaaaaaa</h3><br>
@@ -105,38 +105,21 @@
         </div>
     </div>
 
-    <nav>
-      
-        <ul>
-            <span class="nav-li" onclick="location.href='home.html'">Home</span>
-            <span class="nav-li" onclick="location.href='entrar-consulta.html'">Consultas</span>
-            <span class="turno-li" onclick="location.href='reservar-turno.html'">Nuevo turno</span>
-            <span class="nav-li" onclick="location.href='mis-turnos.html'">Mis turnos</span>
-            <span class="nav-li" onclick="location.href='perfil.html'">Perfil</span>
-            
-        </ul>
+    <script>
+        var docinfo = document.getElementsByClassName("celda-doc")
 
-    </nav>
-  
-  
-<script>
+            for (var i = 0; i < docinfo.length; i++) {
+            docinfo[i].addEventListener("click", mostrarDoc);
+            }
 
-var docinfo = document.getElementsByClassName("celda-doc")
+            console.log(docinfo)
 
-for (var i = 0; i < docinfo.length; i++) {
-  docinfo[i].addEventListener("click", mostrarDoc);
-}
+            function mostrarDoc() {
+                document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
 
-  console.log(docinfo)
-
-function mostrarDoc() {
-      document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
-
-}
-  
-
-
-</script>
+            }
+    </script>
 </body>
+
 </html>
 
