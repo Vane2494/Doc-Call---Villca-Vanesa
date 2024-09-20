@@ -72,7 +72,7 @@ nav{
 }
 
 nav span{
-    margin: 5%;
+    margin: 4%;
     color: #274A8B;
     font-weight: bold;
 
@@ -94,7 +94,8 @@ nav span:hover{
     flex-direction: column;
     width: 70%;
     min-width: 260px;
-    height: 70%;
+    height: 95%;
+    box-sizing: border-box;
     border-radius: 50px;
     align-items: center;
     text-align: center;
@@ -110,7 +111,6 @@ nav span:hover{
     border-radius: 50px;
     margin-top: 5%;
     width: 160%;
-    
     position: relative;
     left: -33%;
     margin-top: 10%;
@@ -1253,3 +1253,15 @@ body#web-pacientes header{
   border-radius: 10px;
   box-shadow: 0 0 20px #9fafce ;
 }
+
+
+/*Footer*/
+
+@media screen and (max-width: 900px){
+.nav span{
+  margin:2%;
+  }
+
+
+}
+
