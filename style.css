@@ -1257,11 +1257,10 @@ body#web-pacientes header{
 
 /*Footer*/
 
-@media screen and (max-width: 500px){
-.nav span{
+@media screen and (max-width: 950px){
+.nav-li, .turno-li{
   margin:1%;
   }
-
 
 }
 
