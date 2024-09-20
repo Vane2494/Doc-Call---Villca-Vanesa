@@ -66,29 +66,29 @@
       </div>
 
      <div class="fin-form">
-         <a class="botones" onclick="verificarTurno()">Agregar</a>
-         <a class="botones cancelar" href="home.html">Cancelar</a>
+         <button class="boton" onclick="verificarTurno()">Agregar</button>
+         <button class="boton" href="home.html">Cancelar</button>
      </div>
 
 </form>
+
+<div id="footer-placeholder"></div>
 
 <div id="pop-up-exitoso">
     <div class="pop-up">
         <h3>Se ha guardado el turno correctamente</h3>
         <br>✔️<br>
 
-        <a class="botones" href="misturnos.html">OK</a>
+        <a class="botones" href="mis-turnos">OK</a>
 
     </div>
 </div>
-
-<div id="footer-placeholder"></div>
 
 <script>
 
 
     function enviarHome(){
-            window.location.href="misturnos.html";
+            window.location.href="mis-turnos";
     }
   function popUpExitoso(){
             var fechayhora = document.getElementById("idFechaForm").value
@@ -154,12 +154,10 @@ celdas.forEach(celda => {
     });
 
 
-function enviarHome() {
+  function enviarHome() {
   event.preventDefault();
-}
-
-
-
+}  
+ 
 function verificarTurno(){
     var verHorario = document.querySelectorAll(".horarios-doc.seleccionado");
     var verFecha = document.querySelectorAll(".fechas-doc.seleccionada");
@@ -189,7 +187,7 @@ function verificarTurno(){
         alert("Por favor seleccione un doctor para el turno");
     }
     if (verDoc.length === 1 && verFecha.length === 1 && verHorario.length === 1) {
-        window.location.href="misturnos.html"
+        window.location.href="mis-turnos"
     }
 
 }

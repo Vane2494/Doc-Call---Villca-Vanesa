@@ -9,7 +9,13 @@
     <title>Inicio</title>
 </head>
 <body>
-  
+
+  <div id="contenedor">
+    <div class="contenedor-loader">
+      <div class="loader"></div>
+    </div>
+    <div class="cargando"> Comprobando datos...</div>
+  </div>
   
     <header>
         
@@ -76,7 +82,13 @@ function mostrarDoc() {
 
 }
   
-
+window.onload=function(){
+        var container=document.getElementById('contenedor');
+   
+            container.style.visibility='hidden';
+            container.style.opacity= '0';
+            
+            } 
 
 </script>
 </body>

@@ -9,7 +9,12 @@
     <title>Inicio</title>
 </head>
 <body>
-  
+      <div id="contenedor">
+        <div class="contenedor-loader">
+          <div class="loader"></div>
+        </div>
+        <div class="cargando"> Cargando...</div>
+      </div>
   
     <header>
         <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
@@ -17,7 +22,7 @@
         <p>Cuida tu salud desde cualquier lugar</p>
     </header>
 
-  <section>
+  <section id="contenido">
 
   <div id="footer-placeholder"></div> 
 
@@ -104,6 +109,8 @@
         </div>
     </div>
 
+    
+
     <script>
     var docinfo = document.getElementsByClassName("celda-doc")
 
@@ -117,7 +124,21 @@
             document.getElementsByClassName("info-doc")[0].classList.toggle('mostrar');     
 
         }
+
+         window.onload=function(){
+        var container=document.getElementById('contenedor');
+   
+            container.style.visibility='hidden';
+            container.style.opacity= '0';
+            
+            } 
+
+  
+
+
+
     </script>
+
 </body>
 
 </html>

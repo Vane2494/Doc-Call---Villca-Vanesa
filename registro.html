@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="regis-titulo">Registrate aquí</h1>
 
-    <form id="formulario" action="home.html">
+  <div class="formRegistro"> 
+    <img class="img-logo" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo.png?1682464702888" alt="logo de doccall">
+    <h1 id="regis-titulo" >Registrate aquí</h1>
+    
+    <form id="formulario"  class="contenedorForm"   action="home.html">
         <input type="text" class="registro" placeholder="Nombre y Apellido" id="nombre-log">
-        <br><br>
+        
         <input type="number" class="registro" placeholder="Edad" id="edad-log">
-        <br><br>
+        
         <input type="text" class="registro" placeholder="Ingresa tu email" id="mail-log">
-        <br><br>
+       
         <input type="password" class="registro" placeholder="Ingresa tu contraseña" id="pass-log">
-        <br><br>
-      
-        <button type="button" class="boton" id="btnSubmit" onclick="validarFormulario()">
+        <br> <br>    
+        <button type="button" class="botones" id="btnSubmit" onclick="validarFormulario()">
             Ingresar
         </button>
     </form>
+
+  </div>
 
     <script>
         function validarFormulario() {

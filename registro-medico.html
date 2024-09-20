@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="regis-titulo">Registrate aquí</h1>
-
-    <form id="formulario" action="home.html">
-        <input type="text" class="registro" placeholder="Nombre y Apellido" id="nombre-log">
-        <br><br>
-        <input type="text" class="registro" placeholder="Especialidad" id="especialidad-log">
-        <br><br>
-        <input type="number" class="registro" placeholder="Matricula" id="matricula-log">
-        <br><br>
-        <input type="number" class="registro" placeholder="Edad" id="edad-log">
-        <br><br>
-        <input type="text" class="registro" placeholder="Ingresa tu email" id="mail-log">
-        <br><br>
-        <input type="password" class="registro" placeholder="Ingresa tu contraseña" id="pass-log">
-        <br><br>
-      
-        <button type="button" class="boton" id="btnSubmit" onclick="validarFormulario()">
-            Ingresar
-        </button>
-    </form>
-
+    
+    <div class="formRegistro"> 
+      <img class="img-logo" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo.png?1682464702888" alt="logo de doccall">
+      <h1 class="redirigir" id="regis-titulo">Registrate aquí</h1>
+      <form id="formulario" action="home-medico.html">
+          <input type="text" class="registro" placeholder="Nombre y Apellido" id="nombre-log">
+          
+          <input type="text" class="registro" placeholder="Especialidad" id="especialidad-log">
+          
+          <input type="text" class="registro" placeholder="Matricula" id="matricula-log">
+          
+          <input type="number" class="registro" placeholder="Edad" id="edad-log">
+          
+          <input type="text" class="registro" placeholder="Ingresa tu email" id="mail-log">
+          
+          <input type="password" class="registro" placeholder="Ingresa tu contraseña" id="pass-log">
+          <br><br>
+        
+          <button type="button" class="boton" id="btnSubmit" onclick="validarFormulario()">
+              Ingresar
+          </button>
+      </form>
+      </div> 
     <script>
         function validarFormulario() {
    
@@ -90,6 +92,18 @@
  
         }
             
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>

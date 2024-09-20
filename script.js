@@ -37,12 +37,9 @@ function validarForm(){
 
 /* Pop up boton cancelar */
    
-
 const abrir = document.getElementById('abrir');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
-
-
 
 abrir.addEventListener('click', () => {
   modal_container.classList.add('show');
