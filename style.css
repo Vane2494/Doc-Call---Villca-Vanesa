@@ -1257,9 +1257,9 @@ body#web-pacientes header{
 
 /*Footer*/
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 500px){
 .nav span{
-  margin:2%;
+  margin:1%;
   }
 
 
