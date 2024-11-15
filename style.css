@@ -1122,9 +1122,7 @@ body#web-consulta button.cancelar{
   top: -40px;
   width: 70%;
   }
-body#web-consulta img{
-    width: 30%;
-}
+
 
 .consul-div{
   margin-top: 100px;
@@ -1284,12 +1282,14 @@ body#web-pacientes header{
       display: none; /* Ocultamos el texto */
   }
   .nav-icon {
-      display: inline-block; /* Mostramos los iconos */
+      display: inline-block;
+      padding: 0px 100px; 
+      /* Mostramos los iconos */
   }
 }
 
 /* Pantallas pequeñas (menos de 768px) */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .nav-menu {
       display: none; /* Ocultamos el menú */
   }
@@ -1304,11 +1304,18 @@ body#web-pacientes header{
   .nav-menu.active {
       display: flex;
       flex-direction: column;
+      position: absolute;
+      bottom: 150px;
+      left: 25%;
+      background-color: white;
+      padding:0px 8px;
   }
+
 
   .nav-menu li {
       text-align: center;
       margin: 2px 0;
+     
   }
   .contenedorsoporte{
     padding: 15%;
@@ -1317,6 +1324,8 @@ body#web-pacientes header{
   .contenedorp {
     margin-left: 20%;
 }
+
+ 
 }
 
 nav {

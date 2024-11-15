@@ -95,3 +95,14 @@ function enviarCorreo(){
   return false;
 }
 /* enviarMail('prueba@pruebafacu.com', 'Facu', 'Romero', 'Hola curso, es una prueba'); */
+
+
+
+function mostrarMenu(){
+  const navMenu = document.querySelector('.nav-menu');
+  if( navMenu.classList.contains('active') ){
+    navMenu.classList.remove('active');
+  }else{
+    navMenu.classList.toggle('active');
+  }
+}
