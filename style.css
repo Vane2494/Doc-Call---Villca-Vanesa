@@ -65,7 +65,7 @@ nav{
     bottom: 0px;
     padding: 15px 0px;
     border-radius: 35px;
-    height: 100px;
+    height: 120px;
     bottom: -80px;
     box-shadow: 0 0 20px #9fafce ;
     text-align: center;
@@ -1308,6 +1308,53 @@ body#web-pacientes header{
 
   .nav-menu li {
       text-align: center;
-      margin: 5px 0;
+      margin: 2px 0;
   }
 }
+
+nav {
+   color: #fff;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  
+  font-size: 1rem;
+}
+nav ul li :hover {
+  background-color: #d3d3d3;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+
+.form-group{
+   width: 80%;
+  margin-top: 8%;
+ }
+
+.contenedorsoporte{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.inputcontrol{
+  width: 70%;
+  height: 35px;
+  border-radius: 5px;
+  border: 5px;
+}
+

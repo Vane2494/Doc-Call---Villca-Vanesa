@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <header class="encabezado">
+        <img class="logo-textless" src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/logo-textless.png?v=1695752901200" alt="logo de doccall">
+            <h2 class="titulo"> Soporte </h2>
+            <p>
+             Envianos un mensaje con tu problema, encontraremos una solucion. 
+            </p>
+         
+      
+    <div class="contenedorsoporte">
+        <form class="form-group" action="" onsubmit="return enviarCorreo()">
+            <div>
+                <label for="exampleInputEmail1">Correo electronico</label><br>
+                <input class="inputcontrol" type="email" id="email" aria-describedby="emailHelp"
+                    placeholder="Ingresa tu email">
+            </div>
+            <div>
+                <label for="nombreUsuario">Nombre</label><br>
+                <input class="inputcontrol"type="text" id="nombreUsuario" placeholder="Nombre"><br>
+                <label for="apellidoUsuario">Apellido</label><br>
+                <input class="inputcontrol"type="text"  id="apellidoUsuario" placeholder="Apellido"><br>
+                <label for="mensajeUsuario">Ingrese su mensaje</label><br>
+                <textarea class="inputcontrol" id="mensajeUsuario" rows="3"></textarea><br>
+            </div>
+            <button type="submit" >Submit</button>
+        </form>
+    </div>
+    <div id="footer-placeholder"></div>    
+</body>
+<script src="script.js"></script>
+</html>
