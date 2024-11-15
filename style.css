@@ -1259,7 +1259,9 @@ body#web-pacientes header{
 .nav-li, .turno-li{
   margin:1%;
   }
-
+  .contenedorsoporte{
+    padding: 10%;
+  }
 }
 
 /*Footer*/
@@ -1283,7 +1285,7 @@ body#web-pacientes header{
   }
   .nav-icon {
       display: inline-block;
-      padding: 0px 100px; 
+      
       /* Mostramos los iconos */
   }
 }
@@ -1300,7 +1302,10 @@ body#web-pacientes header{
       color: white;
       font-size: 24px;
   }
-
+  
+  .nav-icon{
+    padding: 0px 100px; 
+  }
   .nav-menu.active {
       display: flex;
       flex-direction: column;
@@ -1357,7 +1362,7 @@ nav ul li a {
 
 .form-group{
    width: 80%;
-  margin-top: 8%;
+  margin-top: 6%;
  }
 
 .contenedorsoporte{
