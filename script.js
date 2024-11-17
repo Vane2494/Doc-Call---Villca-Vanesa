@@ -94,7 +94,7 @@ function enviarCorreo(){
   enviarMail(email,usuario,apellido,mensaje);
   return false;
 }
-/* enviarMail('prueba@pruebafacu.com', 'Facu', 'Romero', 'Hola curso, es una prueba'); */
+/* nav Menu */
 
 
 
@@ -106,3 +106,5 @@ function mostrarMenu(){
     navMenu.classList.toggle('active');
   }
 }
+
+

@@ -27,29 +27,10 @@
   <div id="footer-placeholder"></div> 
 
   <h3 class="busquedas"> Busquedas recientes... </h3>
-  
-    <div class="busq-rec">
-        <div class="celda-doc">
-            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono4.png?v=1683596306056" alt="doctor uno">
-            <b>Doctor uno</b>
-            <p>Especialidad</p>
+        <div id="medicoContainer" >
+
         </div>
-        <div class="celda-doc">
-            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono3.png?v=1683596306758" alt="doctor uno">
-            <b>Doctor dos</b>
-            <p>Especialidad</p>
-        </div>
-        <div class="celda-doc">
-            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono2.png?v=1683596307494" alt="doctor uno">
-            <b>Doctor tres</b>
-            <p>Especialidad</p>
-        </div>
-        <div class="celda-doc">
-            <img src="https://cdn.glitch.global/bf2991ab-3843-4a43-b5eb-661f80630c58/icono1.png?v=1683596308171" alt="doctor uno">
-            <b>Doctor cuatro</b>
-            <p>Especialidad</p>
-        </div>
-    </div>
+    
   </section>
   
     <div class="info-doc">
@@ -132,7 +113,47 @@
             container.style.opacity= '0';
             
             } 
+            document.addEventListener('DOMContentLoaded', function() {
+  fetch('doc.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Error al cargar el archivo JSON');
+          }
+          return response.json();
+      })
+      .then(medico => {
+          const contenedor = document.getElementById('medicoContainer');
+          medico.forEach(medico => {
+              // Crear la card
+              const card = document.createElement('div');
+              card.className = 'card';
+              card.className = 'celda-doc'; 
 
+              // Agregar la imagen
+              const imagen = document.createElement('img');
+              imagen.src = medico.imagen;
+              imagen.alt = medico.nombre;
+              card.appendChild(imagen);
+
+              // Agregar el nombre
+              const nombre = document.createElement('h3');
+              nombre.textContent = medico.nombre;
+              card.appendChild(nombre);
+
+              // Agregar la descripción
+              const descripcion = document.createElement('p');
+              descripcion.textContent = medico.descripcion;
+              card.appendChild(descripcion);
+
+             
+              // Agregar la card al contenedor
+              contenedor.appendChild(card);
+          });
+      })
+      .catch(error => {
+          console.error('Hubo un problema con la petición Fetch:', error);
+      });
+});
       </script>
 
 </body>

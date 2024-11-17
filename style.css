@@ -1381,3 +1381,40 @@ nav ul li a {
   margin:5px;
 }
 
+#medicoContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  justify-content: center;
+  max-width: 3000px;
+  margin:30px;
+}
+
+.card {
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: 20%; /* Si 100% es una card y ademas tengo en cuenta el gap */
+  height: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 55%;
+}
+
+.card h3 {
+  margin: 0 0;
+  font-size: 14px;
+}
+
+.card p {
+  margin: 2% 0;
+  font-size: 14px;
+}
+
